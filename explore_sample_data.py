@@ -50,10 +50,15 @@ locations = pd.DataFrame({
     'is_altername':is_alternames
 })
 
+# unique-ness of locations
 locations.name.drop_duplicates()
 locations.id.drop_duplicates()
 locations.drop_duplicates()
 
-# use coords and separate dataset to map each location to
-# different levels of granularity;
-# region, state, county, etc.
+locations[['lat', 'lon']].value_counts()
+locations[['name', 'lat', 'lon', 'population', 'parent_country', 'id']].drop_duplicates()
+
+# at least in our sample, these fields are consistent for locations across records
+locations[['id', 'name', 'lat', 'lon', 'population', 'parent_country', 'success']].value_counts()
+
+
