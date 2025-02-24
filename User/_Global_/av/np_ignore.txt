@@ -1,0 +1,6 @@
+# np_ignore.txt basic support starts with app v1.6.4.14 (2024-12-21)
+#
+# Currently, presense of this file will cause all folder contents to be ignored.
+# Future feature will support file filter patterns akin to '.gitignore'
+
+*.*

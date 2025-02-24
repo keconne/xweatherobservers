@@ -1,0 +1,5 @@
+license-assets_2024-03-20.txt
+
+FILE | License (accronym) | short description
+
+hangargllb.glb | CC BY-NC-SA 4.0 DEED | Attribution-NonCommercial-ShareAlike 4.0 International

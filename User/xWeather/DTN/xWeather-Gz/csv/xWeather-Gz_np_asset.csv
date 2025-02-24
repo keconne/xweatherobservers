@@ -1,0 +1,12 @@
+np_asset_id,parent_id,set_id,type,item_id,name,path,params
+1,0,0,202,1,"3004_land_food-feed.png",".\User\_Global_\images\",""
+2,0,0,202,2,"map00001.jpg",".\User\_Global_\images\",""
+3,0,0,202,3,"map00002.jpg",".\User\_Global_\images\",""
+4,0,0,202,4,"map00003.jpg",".\User\_Global_\images\",""
+5,0,0,202,5,"material_0_baseColor.jpeg",".\User\_Global_\images\",""
+6,0,0,300,10001,"antz.obj",".\User\_Global_\models\",""
+7,0,0,300,10002,"dolphin.md2",".\User\_Global_\models\",""
+8,7,0,203,6,"dolphin_f.bmp",".\User\_Global_\models\",""
+9,0,0,300,10003,"hangargllb.glb",".\User\_Global_\models\",""
+10,0,0,300,10004,"jeep1.3ds",".\User\_Global_\models\",""
+11,10,0,203,7,"jeep1.jpg",".\User\_Global_\models\",""

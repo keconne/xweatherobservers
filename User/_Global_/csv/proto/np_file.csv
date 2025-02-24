@@ -1,0 +1,12 @@
+np_file_id,parent_id,type_id,type_name,item_id,name,path
+1,0,1,startup,0,_Global_,_Global_\
+2,0,2,preset,1,Red-Bull_p1,ILUVDATA\Sports-Med\Red-Bull_p1\
+3,0,2,preset,2,EOL-FW-Human_p2,GaiaViz\EOL\EOL-FW-Human_p2\
+4,0,2,preset,3,Twitter-Bots_p3,ILUVDATA\Twitter\Twitter-Bots_p3\
+5,0,5,fileviz,0,FileViz,FileViz\
+6,0,6,gitviz,0,GitViz,GitViz\
+7,0,10,dataset,1,My-Dataset,Example\Tutorial\My-Dataset\
+8,7,11,csv,1,np_node.csv,csv\
+9,7,12,images,1,Earth.jpg,images\
+10,7,13,models,10001,jeep.3ds,models\
+11,10,14,images,2,jeep.jpg,models\

@@ -1,0 +1,5 @@
+# np_ignore.txt
+#
+# This folder will be ignored (skipped) when loading a datascape.
+
+*.*
