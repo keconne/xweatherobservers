@@ -76,3 +76,7 @@ countrycounts = locations[['parent_country']].value_counts()
 eventsbylocationseffected = locations[['event']].value_counts()
 weatherbyevent = Counter(events)
 
+print(namecounts)
+print(countrycounts)
+print(eventsbylocationseffected)
+print(weatherbyevent)
