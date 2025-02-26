@@ -45,9 +45,13 @@ all__scores = extract_field(data, '_score', False)
 set(all__scores)
 
 # 3) are there instances of _source being a list of dictionaries or is it always 1-1? 
-
+all__source = extract_field(data, '_source', False)
+n_fields_in_source = [len(all__source[index]) for index, value in enumerate(all__source)]
+set(n_fields_in_source)
 
 # 4) is article_index the same for all records?
+all_article_index = extract_field(data, 'article_index', True, True)
+set(all_article_index)
 
 
 # 5) how is the proability field in the articles dict derived?
