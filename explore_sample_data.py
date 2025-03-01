@@ -50,9 +50,9 @@ locations = pd.DataFrame({
     'is_altername':is_alternames
 })
 
-locations.name.drop_duplicates()
-locations.id.drop_duplicates()
-locations.drop_duplicates()
+print(locations.name.drop_duplicates())
+print(locations.id.drop_duplicates())
+print(locations.drop_duplicates())
 
 # use coords and separate dataset to map each location to
 # different levels of granularity;
