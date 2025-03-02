@@ -4,7 +4,7 @@ from collections import Counter
 
 
 # read json file
-with open("xWeather_Erasmus_US_250.json", "r") as file:
+with open("./xWeather-GZ/py+data/xWeather_Erasmus_US_250.json", "r") as file:
     data = json.load(file)
 
 # initialize lists
@@ -22,6 +22,10 @@ is_alternames = []
 records = []
 events = []
 event_at_location = []
+record_associated = []
+r_articles = []
+r_locations = []
+
 # parse all locations
 for i in range(0,len(data)):
     records.append(i)
@@ -29,7 +33,10 @@ for i in range(0,len(data)):
     nested_locations = nest1.get('locations', [])
     event_type = nest1.get('event')
     events.append(event_type)
+    r_articles.append(nest1.get('articles', []))
+    r_locations.append(nested_locations)
     for location in nested_locations:
+        record_associated.append(i)
         names.append(location.get('name'))
         ids.append(location.get('id'))
         coords = location.get('location', {})
@@ -57,6 +64,15 @@ locations = pd.DataFrame({
     'is_altername':is_alternames,
     'event': event_at_location
 })
+
+recordsList = pd.DataFrame({
+    'index':records,
+    'Weather Event': events,
+    'Articles': r_articles,
+    'Locations': r_locations
+    })
+
+
 
 # unique-ness of locations
 locations.name.drop_duplicates()
