@@ -75,7 +75,13 @@ df5.probability.drop_duplicates()
 df5[df5.probability < .1]
 data[86] # long academic analysis of a biblical civilization's response to a 3-year drought.
 # locations are all tied to the university different participating researchers are affiliated with
-data[89]
+data[89] # 2/4 articles have low probability
+# one is long-winded and the summary is erratic, but doesn't seem too different from the others in this record by content
+# The other is unique in that it recaps a testimony to congress, but it's directly relevant to the flood
+data[103] # starting to think it may be focused more on time and place than content
+# the low probability article here (1/4) is in a different location a month later than the other articles
+data[108] # 1 article only. Trivia post with minimal mention the weather event.
+
 
 #------------------------------------------------------------------------------------------
 # 6) confirm definition for the severity field in the articles dict?
@@ -179,8 +185,9 @@ data[200]
 
 #------------------------------------------------------------------------------------------
 # 9) confirm definition for the success field in the locations dict
-
-
+df9 = extract_field(data, 'success', True, False, True, True)
+df9.drop_duplicates()
+df9.success.drop_duplicates()
 
 #------------------------------------------------------------------------------------------
 # 10) how/is the _source-level probability field tied to the articles probability?
@@ -224,9 +231,12 @@ countries_per_record = extract_field(data, 'country', True, return_index = True)
 len(countries_per_record[countries_per_record > 1]) # not in sample
 
 
+#-----------------------------------------------------------------------------------------
 # 14) explore runner-up data to guess definition
+df14 =  extract_field(data, 'runner_up', True, False, False, return_index = True)
+df14.merge(df12).merge(df11).merge(df10)
 
-
+#-----------------------------------------------------------------------------------------
 # 15) explore is_altername definition
 df15 = extract_field(data, 'is_altername', True, False, True, return_index = True)
 df15[df15.is_altername]
